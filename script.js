@@ -20,6 +20,11 @@ function playerShot(event) {
             currentPlayer = playerOne
         }
     }
+
+    if (winner(winningGames) === true) {
+        console.log("Congrats You have won")
+        return
+    }
 }
 
 function winner(winningGames) {
@@ -62,9 +67,4 @@ function winner(winningGames) {
 
 for (var i = 0; i < gameCell.length; i++) {
     gameCell[i].addEventListener("click", playerShot, false)
-
-    if (winner(winningGames) === true) {
-        console.log("Congrats You have won")
-        break
-    }
 }
