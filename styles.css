@@ -1,0 +1,44 @@
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    width: 80vw;
+}
+
+h1 {
+    font: 6rem;
+}
+
+header {
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+button {
+    width: 40%;
+    font-size: 3rem;
+    border: 5px solid black;
+    border-radius: 15px;
+    background-color: beige;
+}
+
+#gameBoard {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gameCell {
+    border: 5px solid black;
+    height: 150px;
+    width: auto;
+}
+
+.smallLetters {
+    font-size: 0.5rem;
+}
