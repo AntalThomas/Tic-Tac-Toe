@@ -33,6 +33,21 @@ button {
     grid-template-columns: repeat(3, 1fr);
 }
 
+#winningWindow {
+    width: 600px;
+    height: 400px;
+    background-color: lightgray;
+    border: 10px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
 .gameCell {
     border: 5px solid black;
     height: 150px;

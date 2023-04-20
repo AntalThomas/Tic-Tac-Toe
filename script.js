@@ -1,3 +1,4 @@
+var winningWindow = document.querySelector("#winningWindow")
 var gameBoard = document.querySelector("#gameBoard")
 var gameCell = document.getElementsByClassName("gameCell")
 const playerOne = "X", playerTwo = "O"
@@ -5,24 +6,25 @@ var currentPlayer = playerOne
 var winningGames = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
 
 function playerShot(event) {
-    if (event.target.textContent === ""){
-        event.target.textContent = currentPlayer
+    var clickedCell = event.target
+    if (clickedCell.textContent === ""){
+        clickedCell.textContent = currentPlayer
 
         if (currentPlayer === playerOne) {
-            event.target.textContent = currentPlayer
-            event.target.classList.add(currentPlayer)
+            clickedCell.textContent = currentPlayer
+            clickedCell.classList.add(currentPlayer)
 
             currentPlayer = playerTwo
         } else {
-            event.target.textContent = currentPlayer
-            event.target.classList.add(currentPlayer)
+            clickedCell.textContent = currentPlayer
+            clickedCell.classList.add(currentPlayer)
 
             currentPlayer = playerOne
         }
     }
 
     if (checkWinner(winningGames) === true) {
-        console.log("Congrats You have won")
+        winningWindow.style.visibility = "visible"
     }
 }
 
@@ -37,7 +39,7 @@ function checkWinner(winningGames) {
                 count++
             }
         }
-        
+
         if (count === 3) {
             return true
         }
@@ -55,22 +57,6 @@ function checkWinner(winningGames) {
         count = 0
     }
 }
-
-// Previous code when I didn't know how to make the X and O take turns
-// gameBoard.addEventListener("click", function (event) {
-//     var box = event.target
-
-//     if (box.textContent === "") {
-//         box.textContent = "X"
-//     } else if (box.textContent === "X") {
-//         box.textContent = "O"
-//     } else {
-//         box.textContent = ""
-//     }
-// })
-
-
-
 
 for (var i = 0; i < gameCell.length; i++) {
     gameCell[i].addEventListener("click", playerShot, false)
