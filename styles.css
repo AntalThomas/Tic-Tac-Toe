@@ -21,6 +21,7 @@ footer {
 
 button {
     width: 40%;
+    
     font-size: 3rem;
     border: 5px solid black;
     border-radius: 15px;
@@ -38,25 +39,31 @@ button {
     height: 400px;
     background-color: lightgray;
     border: 10px solid gray;
+    border-radius: 15px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     visibility: hidden;
+
+    font-size: 1.5rem;
 }
 
 .gameCell {
-    border: 5px solid black;
     height: 150px;
     width: auto;
+
+    border: 5px solid black;
     font-size: 10rem;
+
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .smallLetters {
