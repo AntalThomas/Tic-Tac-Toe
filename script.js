@@ -21,30 +21,37 @@ function playerShot(event) {
         }
     }
 
-    if (winner(winningGames) === true) {
+    if (checkWinner(winningGames) === true) {
         console.log("Congrats You have won")
-        return
     }
 }
 
-function winner(winningGames) {
+
+
+function checkWinner(winningGames) {
     var count = 0
 
     for (var i = 0; i < winningGames.length; i++) {
         for (var j = 0; j < winningGames[i].length; j++) {
             if (gameBoard.children[winningGames[i][j]].classList[1] === "X") {
                 count++
-    
-                // console.log(gameBoard.children[winningGames[i][j]], "Matches")
-                // console.log(gameBoard.children[winningGames[i][j]].classList[1])
-                // console.log(winningGames[i][j], gameBoard.children[j].classList[1])
             }
         }
+        
         if (count === 3) {
-            console.log("true")
             return true
         }
-        console.log("Next I", i)
+        count = 0
+
+        for (var j = 0; j < winningGames[i].length; j++) {
+            if (gameBoard.children[winningGames[i][j]].classList[1] === "O") {
+                count++
+            }
+        }
+
+        if (count === 3) {
+            return true
+        }
         count = 0
     }
 }
