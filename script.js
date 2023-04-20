@@ -1,6 +1,7 @@
 var winningWindow = document.querySelector("#winningWindow")
 var gameBoard = document.querySelector("#gameBoard")
 var gameCell = document.getElementsByClassName("gameCell")
+var winningPlayer = document.querySelector(".winningPlayer")
 const playerOne = "X", playerTwo = "O"
 var currentPlayer = playerOne
 var winningGames = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
@@ -25,6 +26,12 @@ function playerShot(event) {
 
     if (checkWinner(winningGames) === true) {
         winningWindow.style.visibility = "visible"
+
+        if (currentPlayer === "X") {
+            winningPlayer.textContent = "O"
+        } else {
+            winningPlayer.textContent = "X"
+        }
     }
 }
 
