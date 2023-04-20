@@ -3,7 +3,7 @@ SEI Project 1:
 
 Tic Tac Toe is a fun game played between two people taking in turns to try and place their symbol three spots in a row.
 
-## [Click Here](https://www.example.com) to see my live project!
+## [Click Here](https://antalthomas.github.io/Tic-Tac-Toe/) to see my live project!
 
 ## How to play
 - Click the link above.
@@ -21,6 +21,7 @@ Tic Tac Toe is a fun game played between two people taking in turns to try and p
 5. Winner window is shown once a winner has been awarded.
 6. Restart button reloads window.
 7. Change restart button reset everything without reloading website.
+
 ![Flow Chart](./Images/flowChart.png)
 
 ## Struggles:
@@ -28,14 +29,16 @@ I really struggled with making the event handler take it in turns with applying 
 
 ## Bugs to Fix
 - Restart button currently not doing anything.
-- When game is a draw nothing happens.
+- When game is drawn nothing happens.
 - Make prettier
+- Improve code readability
 
 ## Future Features
 - Restart button
 - Next game button after winner is awarded
 - Keep scores between players
 - Player chosen symbol
+- Different themes that can be chosen at any time
 
 ## Sources used:
 https://stackoverflow.com/questions/70950898/how-can-i-turn-these-two-functions-into-a-turn-by-turn-for-naughts-and-crosses
@@ -45,3 +48,5 @@ https://www.w3schools.com/css/css_align.asp
 https://www.w3schools.com/jsref/prop_style_visibility.asp
 
 https://www.markdownguide.org/cheat-sheet/
+
+https://gist.git.generalassemb.ly/kasun/24d22950b4e29cd275f3e62bc77ccaa1
