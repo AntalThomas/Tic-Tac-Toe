@@ -5,12 +5,12 @@ body {
     width: 80vw;
 }
 
-h1 {
-    font: 6rem;
-}
-
 header {
     text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
 }
 
 footer {
@@ -34,7 +34,7 @@ button {
     grid-template-columns: repeat(3, 1fr);
 }
 
-#winningWindow {
+#winningWindow, #drawnWindow {
     width: 600px;
     height: 400px;
     background-color: lightgray;
@@ -67,5 +67,5 @@ button {
 }
 
 .smallLetters {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
 }

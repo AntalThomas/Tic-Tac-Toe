@@ -32,10 +32,30 @@ function playerShot(event) {
         } else {
             winningPlayer.textContent = "X"
         }
+
+        return
+    }
+
+    if (checkDrawn(gameBoard) === true) {
+        drawnWindow.style.visibility = "visible"
+
+        return
     }
 }
 
+function checkDrawn(gameBoard) {
+    var count = 0
 
+    for (var i = 0; i < gameBoard.children.length; i++) {
+        if (gameBoard.children[i].classList[1] === "X" || gameBoard.children[i].classList[1] === "O") {
+            count++
+        }
+    }
+
+    if (count === 9) {
+        return true
+    }
+}
 
 function checkWinner(winningGames) {
     var count = 0
