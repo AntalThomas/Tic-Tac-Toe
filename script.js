@@ -5,6 +5,7 @@ var winningPlayer = document.querySelector(".winningPlayer")
 var restartButton = document.querySelector("#restart")
 const playerOne = "X", playerTwo = "O"
 var currentPlayer = playerOne
+var game = true
 var winningGames = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
 
 function playerShot(event) {
@@ -32,12 +33,12 @@ function playerShot(event) {
         } else {
             winningPlayer.textContent = "X"
         }
-        return
+
+        gameBoard.remove()
     }
 
     if (checkDrawn(gameBoard) === true) {
         drawnWindow.style.visibility = "visible"
-        return
     }
 }
 

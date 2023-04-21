@@ -33,7 +33,7 @@ Tic Tac Toe is a fun game played between two people taking in turns to try and p
 I really struggled with making the event handler take it in turns with applying either a "X" or "O", so for a work around until I figured out how to do that, I just made the user cycle through the options with a click. I eventually found help on stack overflow with a similar problem that helped me.
 
 ## Bugs to Fix
-- Restart refeshes the page instead of resetting everything.
+- Restart refreshes the page instead of resetting everything.
 - When a player has won the players can still click on blank cells.
 - Make prettier.
 - Improve code readability.
