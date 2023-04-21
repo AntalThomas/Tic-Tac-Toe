@@ -8,16 +8,15 @@ var winningGames = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5
 
 function playerShot(event) {
     var clickedCell = event.target
+
     if (clickedCell.textContent === ""){
         clickedCell.textContent = currentPlayer
 
         if (currentPlayer === playerOne) {
-            clickedCell.textContent = currentPlayer
             clickedCell.classList.add(currentPlayer)
 
             currentPlayer = playerTwo
         } else {
-            clickedCell.textContent = currentPlayer
             clickedCell.classList.add(currentPlayer)
 
             currentPlayer = playerOne
@@ -32,22 +31,21 @@ function playerShot(event) {
         } else {
             winningPlayer.textContent = "X"
         }
-
         return
     }
 
     if (checkDrawn(gameBoard) === true) {
         drawnWindow.style.visibility = "visible"
-
         return
     }
 }
 
 function checkDrawn(gameBoard) {
+    var gameCell = gameBoard.children
     var count = 0
 
-    for (var i = 0; i < gameBoard.children.length; i++) {
-        if (gameBoard.children[i].classList[1] === "X" || gameBoard.children[i].classList[1] === "O") {
+    for (var i = 0; i < gameCell.length; i++) {
+        if (gameCell[i].classList[1] === "X" || gameCell[i].classList[1] === "O") {
             count++
         }
     }
@@ -58,33 +56,27 @@ function checkDrawn(gameBoard) {
 }
 
 function checkWinner(winningGames) {
-    var count = 0
+    function loopChecker(symbol) {
+        var count = 0
+        
+        for (var j = 0; j < winningGames[i].length; j++) {
+            if (gameBoard.children[winningGames[i][j]].classList[1] === symbol) {
+                count++
+            }
+        }
+
+        if (count === 3) {
+            return true
+        }
+    }
 
     for (var i = 0; i < winningGames.length; i++) {
-        for (var j = 0; j < winningGames[i].length; j++) {
-            if (gameBoard.children[winningGames[i][j]].classList[1] === "X") {
-                count++
-            }
-        }
+        if (loopChecker("X") === true) { return true }
 
-        if (count === 3) {
-            return true
-        }
-        count = 0
-
-        for (var j = 0; j < winningGames[i].length; j++) {
-            if (gameBoard.children[winningGames[i][j]].classList[1] === "O") {
-                count++
-            }
-        }
-
-        if (count === 3) {
-            return true
-        }
-        count = 0
+        if (loopChecker("O") === true) { return true }
     }
 }
 
 for (var i = 0; i < gameCell.length; i++) {
-    gameCell[i].addEventListener("click", playerShot, false)
+    gameCell[i].addEventListener("click", playerShot)
 }
