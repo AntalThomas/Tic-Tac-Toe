@@ -56,3 +56,5 @@ https://www.markdownguide.org/cheat-sheet/
 https://gist.git.generalassemb.ly/kasun/24d22950b4e29cd275f3e62bc77ccaa1
 
 https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click
+
+https://www.w3schools.com/jsref/met_element_remove.asp
