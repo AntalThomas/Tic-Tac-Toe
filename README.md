@@ -24,9 +24,9 @@ Tic Tac Toe is a fun game played between two people taking in turns to try and p
 ![Flow Chart](./Images/flowChart.png)
 
 ## Extra Plan
-1. Scores are kept for each player.
+1. Scores are kept for each player. :white_check_mark:
 2. Add three themes to pick from at any time at the top left corner of screen.
-3. Restart button doesn't refresh the page it just resets the game board.
+3. Restart button doesn't refresh the page it just resets the game board. :white_check_mark:
 4. Player chooses symbols before game starts.
 
 ## Struggles:
@@ -38,7 +38,7 @@ I really struggled with making the event handler take it in turns with applying 
 - Make prettier.
 - Improve code readability.
 - Since the whole page resets the scores always reset to 0  :white_check_mark:
-- The last players score updates by one if the game is drawn
+- The last players score updates by one if the game is drawn :white_check_mark:
 
 ## Future Features
 - Next game button after winner is awarded.  :white_check_mark:

@@ -54,9 +54,15 @@ function playerShot(event) {
 
         if (currentPlayer === "X") {
             winningPlayer.textContent = "O"
+            
+            playerTwoScore++
+
             updateScores()
         } else {
             winningPlayer.textContent = "X"
+
+            playerOneScore++
+
             updateScores()
         }
 
@@ -102,12 +108,10 @@ function checkWinner(winningGames) {
 
     for (var i = 0; i < winningGames.length; i++) {
         if (loopChecker("X") === true) { 
-            playerOneScore++
             return true 
         }
 
         if (loopChecker("O") === true) { 
-            playerTwoScore++
             return true 
         }
     }
