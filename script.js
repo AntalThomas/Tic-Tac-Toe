@@ -70,7 +70,7 @@ function playerShot(event) {
         nextGameButton.style.visibility = "visible"
     }
 
-    if (checkDrawn(gameBoard) === true) {
+    if (checkDrawn(gameBoard) === true && checkWinner(winningGames) !== true) {
         drawnWindow.style.visibility = "visible"
         gameBoard.style.visibility = "hidden"
     }

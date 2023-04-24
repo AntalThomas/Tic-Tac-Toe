@@ -62,3 +62,9 @@ https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-c
 https://www.w3schools.com/jsref/met_element_remove.asp
 
 https://stackoverflow.com/questions/56418763/creating-the-perfect-rainbow-gradient-in-css
+
+https://gist.github.com/rxaviers/7360908
+
+https://www.tutorialspoint.com/css/css_layers.htm
+
+https://www.w3schools.com/jsref/prop_element_classlist.asp
