@@ -10,8 +10,24 @@
 <body>
 
     <header>
-        <img src="" alt="">
+        <section id="themes">
+            <div class="themeCell white"></div>
+            <div class="themeCell black"></div>
+            <div class="themeCell rainbow"></div>
+        </section>
+
         <h1>Tic Tac Toe <span class="smallLetters">by Blake Varbai-Heward</span></h1>
+
+        <section id="scores">
+            <div>
+                <p>Player One Score:</p>
+                <h2 class="playerOneScore">0</h2>
+            </div>
+            <div>
+                <p>Player Two Score:</p>
+                <h2 class="playerTwoScore">0</h2>
+            </div>
+        </section>
     </header>
 
     <section id="winningWindow">
@@ -35,7 +51,8 @@
     </main>
 
     <footer>
-        <button id="restart" onClick="window.location.reload()">RESTART</button>
+        <button id="restart">RESTART</button>
+        <button id="nextGame">NEXT GAME</button>
     </footer>
 
     <script src="./script.js"></script>
